@@ -70,7 +70,28 @@ namespace VECTOR
 
 	void Vector::reset(double n1, double n2, Mode form)
 	{
-		this->Vector(n1, n2, form);
+		mode = form;
+		if (form == RECT)
+		{
+			x = n1;
+			y = n2;
+			set_mag();
+			set_ang();
+		}
+		else if (form == POL)
+		{
+			mag = n1;
+			ang = n2 / Rad_to_deg;
+			set_x();
+			set_y();
+		}
+		else
+		{
+			cout << "Incorrect 3rd argument to Vector() -- ";
+			cout << "vector set to 0.\n";
+			x = y = mag = ang = 0.0;
+			mode = RECT;
+		}
 	}
 
 	Vector::~Vector()

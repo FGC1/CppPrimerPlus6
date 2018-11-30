@@ -38,7 +38,7 @@ namespace VECTOR
 		Vector operator+(const Vector& b) const;
 		Vector operator-(const Vector& b) const;
 		Vector operator-() const;
-		Vector operator*(const Vector& b) const;
+		Vector operator*(double n) const;
 		
 		friend Vector operator*(double n, const Vector& a);
 		friend std::ostream& operator<<(std::ostream& os, const Vector& v);
