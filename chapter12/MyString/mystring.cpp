@@ -36,6 +36,7 @@ MyString& MyString::operator=(const MyString &myString)
 	this->len = myString.len;
 	this->str = new char[len + 1];
 	strcpy(this->str, myString.str);
+	return *this;
 }
 
 MyString& MyString::operator=(const char* szBuf)
@@ -44,6 +45,7 @@ MyString& MyString::operator=(const char* szBuf)
 	this->len = strlen(szBuf);
 	this->str = new char[len + 1];
 	strcpy(this->str, szBuf);
+	return *this;
 }
 
 char& MyString::operator[](int i)
