@@ -6,7 +6,7 @@ using namespace std;					// make difinitions visible
 
 int main()						// function header
 {							// start of function body
-	cout << "Come up and C++ me some time.";	// message
+	cout << "Come up and C Plus Plus me some time.";// message
 	cout << endl;					// start a new line
 	cout << "You won't regret it!" << endl;		// more output
 
